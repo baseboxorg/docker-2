@@ -1,4 +1,5 @@
-FROM alpine:3.7
+#FROM alpine:3.7
+FROM resin/armhf-alpine
 
 RUN apk add --no-cache \
 		ca-certificates
