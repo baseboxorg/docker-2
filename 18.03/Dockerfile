@@ -1,7 +1,5 @@
 FROM alpine:3.7
-#FROM resin/armhf-alpine
 
-RUN [ "cross-build-start" ]
 
 RUN apk add --no-cache \
 		ca-certificates
@@ -59,8 +57,6 @@ RUN set -ex; \
 
 COPY modprobe.sh /usr/local/bin/modprobe
 COPY docker-entrypoint.sh /usr/local/bin/
-
-RUN [ "cross-build-end" ]
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["sh"]
