@@ -40,10 +40,12 @@ RUN set -ex; \
 
 COPY dockerd-entrypoint.sh /usr/local/bin/
 
+RUN [ "cross-build-end" ]
+
 VOLUME /var/lib/docker
 EXPOSE 2375
 
-RUN [ "cross-build-start" ]
+
 
 ENTRYPOINT ["dockerd-entrypoint.sh"]
 CMD []
