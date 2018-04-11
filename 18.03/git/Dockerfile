@@ -1,4 +1,4 @@
-FROM baseboxorg/docker-lite:resin-18.03
+FROM baseboxorg/docker-lite:18.03
 
 RUN [ "cross-build-start" ]
 
