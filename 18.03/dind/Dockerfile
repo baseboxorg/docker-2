@@ -1,4 +1,4 @@
-FROM baseboxorg/docker-resin:18.03
+FROM baseboxorg/docker-lite:resin-18.03
 
 # https://github.com/docker/docker/blob/master/project/PACKAGERS.md#runtime-dependencies
 RUN set -eux; \
