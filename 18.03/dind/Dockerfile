@@ -1,5 +1,7 @@
 FROM baseboxorg/docker-lite:resin-18.03
 
+RUN [ "cross-build-start" ]
+
 # https://github.com/docker/docker/blob/master/project/PACKAGERS.md#runtime-dependencies
 RUN set -eux; \
 	apk add --no-cache \
@@ -40,6 +42,8 @@ COPY dockerd-entrypoint.sh /usr/local/bin/
 
 VOLUME /var/lib/docker
 EXPOSE 2375
+
+RUN [ "cross-build-start" ]
 
 ENTRYPOINT ["dockerd-entrypoint.sh"]
 CMD []
